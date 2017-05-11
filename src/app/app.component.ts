@@ -8,12 +8,23 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class AppComponent {
   title = 'app works!';
-
-  items: FirebaseListObservable<any[]>;
+  
+  items: FirebaseListObservable<any>;
   constructor(db: AngularFireDatabase) {
     // console.log();
-    
     this.items = db.list('/items');
+  }
+
+  onSubmit(item: HTMLInputElement) {
+    console.log('item', item);
+    this.items.push(item.value);
+    item.value = '';
+    console.log(this.items);
+  }
+
+  remove(id: any) {
+    console.log('id', id);
+    this.items.remove(id);
   }
 
 }

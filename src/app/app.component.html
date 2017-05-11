@@ -4,5 +4,10 @@
 <ul>
   <li class="text" *ngFor="let item of items | async">
     {{item.$value}}
+    - 
+    <button id="remove" (click)="remove(item)">Remove</button>
   </li>
 </ul>
+
+<input type="text" id="item" placeholder="item..." #item/> 
+<button id="submit" (click)="onSubmit(item)">SAVE</button>
