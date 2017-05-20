@@ -7,16 +7,22 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { PeopleComponent } from './people/people.component';
+import { SharedModule } from './shared/shared.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PeopleComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase, 'ngfire'),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

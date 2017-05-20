@@ -1,13 +1,28 @@
-<h1>
-  {{title}}
-</h1>
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.$value}}
-    - 
-    <button id="remove" (click)="remove(item)">Remove</button>
-  </li>
-</ul>
+<app-toolbar [title]="title"></app-toolbar>
 
-<input type="text" id="item" placeholder="item..." #item/> 
-<button id="submit" (click)="onSubmit(item)">SAVE</button>
+<md-grid-list cols="2" rowHeight="2:1">
+  <md-grid-tile>
+    <ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.$value}} -
+        <button id="remove" (click)="remove(item)">Remove</button>
+      </li>
+    </ul>
+  </md-grid-tile>
+  <md-grid-tile>
+    <app-people></app-people>
+  </md-grid-tile>
+  <md-grid-tile>
+    <md-input-container class="example-full-width">
+      <input mdInput type="text" id="item" placeholder="item..." #item value="item">
+    </md-input-container>
+    <br>
+    <button md-raised-button id="submit" (click)="onSubmit(item)">SAVE</button>
+
+  </md-grid-tile>
+  <md-grid-tile>
+    <md-input-container class="example-full-width">
+      <input mdInput placeholder="Company (disabled)" value="Google">
+    </md-input-container>
+  </md-grid-tile>
+</md-grid-list>

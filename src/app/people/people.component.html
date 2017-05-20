@@ -1,0 +1,28 @@
+<p>
+  people works!
+</p>
+<ul>
+  <li class="text" *ngFor="let person of people | async">
+    {{person.$key}}
+    <!--<pre>  {{person | json}} </pre> -->
+    {{person.lastName + ", " + person.firstName}} -
+    <button id="remove" (click)="remove(person)">Remove</button>
+  </li>
+</ul>
+
+<form #f="ngForm" (ngSubmit)="updateCustomer(f)">
+  <div>
+    <label>First Name</label>
+    <input type="text" name="firstName" [(ngModel)]="customer.firstName" required/>
+  </div>
+  <div>
+    <label>Last Name</label>
+    <input type="text" name="lastName" [(ngModel)]="customer.lastName" required/>
+  </div>
+  <div>
+    <label>Email</label>
+    <input type="text" name="email" [(ngModel)]="customer.email" required/>
+  </div>
+  <button [disabled]="!f.valid">Save</button>
+
+</form>

@@ -11,6 +11,11 @@ import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from './environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {} from '../'
+
 
 // Unfortunately there's no typing for the `__karma__` variable. Just declare it as any.
 declare var __karma__: any;
@@ -19,6 +24,7 @@ declare var require: any;
 // Prevent Karma from running prematurely.
 __karma__.loaded = function () {};
 
+ AngularFireModule.initializeApp(environment.firebase, 'ngfire');
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
