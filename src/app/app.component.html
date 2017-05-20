@@ -1,13 +1,12 @@
 <app-toolbar [title]="title"></app-toolbar>
 
-<md-grid-list cols="2" rowHeight="2:1">
+<md-grid-list cols="2" rowHeight="1:1">
   <md-grid-tile>
-    <ul>
-      <li class="text" *ngFor="let item of items | async">
-        {{item.$value}} -
-        <button id="remove" (click)="remove(item)">Remove</button>
-      </li>
-    </ul>
+    <md-list>
+      <md-list-item *ngFor="let item of items | async"> 
+        {{item.$value}} - 
+        <button md-raised-button id="remove" (click)="remove(item)">Remove</button></md-list-item>
+    </md-list>
   </md-grid-tile>
   <md-grid-tile>
     <app-people></app-people>

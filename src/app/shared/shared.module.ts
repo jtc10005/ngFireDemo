@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdButtonModule, MdCheckboxModule, MdGridListModule, MdToolbarModule, MdInputModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdGridListModule, MdToolbarModule, MdInputModule, MdListModule } from '@angular/material';
 
 @NgModule({
-  imports: [MdButtonModule, MdCheckboxModule, MdGridListModule, MdInputModule, MdButtonModule],
-  exports: [MdButtonModule, MdCheckboxModule, MdGridListModule, MdInputModule, MdButtonModule],
+  imports: [MdButtonModule, MdCheckboxModule, MdGridListModule, MdInputModule, MdButtonModule, MdListModule],
+  exports: [MdButtonModule, MdCheckboxModule, MdGridListModule, MdInputModule, MdButtonModule, MdListModule],
   declarations: []
 })
 export class SharedModule { }
