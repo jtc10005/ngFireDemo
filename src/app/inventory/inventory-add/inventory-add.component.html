@@ -1,5 +1,16 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()" novalidate>
+  <div>
+    <md-input-container> <input mdInput type="text" id="name" placeholder="name..." #item value="name" formControlName="name"> </md-input-container>
+    <md-input-container><input mdInput type="text" id="type" placeholder="type..." #item value="type" formControlName="type"> </md-input-container>
+    <md-input-container><input mdInput type="text" id="color" placeholder="color..." #item value="color" formControlName="color"> </md-input-container>
+    <md-input-container><input mdInput type="number" id="quantity" placeholder="quantity..." #item value="quantity" formControlName="quantity"> </md-input-container>
+    <md-input-container><input mdInput type="number" id="cost" placeholder="cost..." #item value="cost" formControlName="cost"> </md-input-container>
+  </div>
+  <button type="submit" md-raised-button color="accent" [disabled]="itemForm.pristine || itemForm.invalid" id="submit">SAVE</button>
+  <button type="reset" md-raised-button color="accent" [disabled]="itemForm.pristine" id="reset">Reset</button>
+</form>
 
-<md-input-container class="example-full-width">
-  <input mdInput type="text" id="item" placeholder="item..." #item value="item">
-</md-input-container>
-<button md-raised-button color="accent" id="submit" (click)="onSubmit(item)">SAVE NEW ITEM</button>
+
+
+<p>Form value: {{ itemForm.value | json }}</p>
+<p>Form status: {{ itemForm.status | json }}</p>

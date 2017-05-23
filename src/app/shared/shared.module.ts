@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import {
   MdButtonModule,
   MdCheckboxModule,
@@ -26,6 +27,7 @@ export * from './models';
     MdMenuModule,
     MdToolbarModule,
     MdCardModule,
+    ReactiveFormsModule,
     FlexLayoutModule
   ],
   exports: [
@@ -38,6 +40,7 @@ export * from './models';
     MdMenuModule,
     MdToolbarModule,
     MdCardModule,
+    ReactiveFormsModule,
     FlexLayoutModule
   ],
   declarations: []
