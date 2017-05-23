@@ -21,3 +21,7 @@
   align-items: stretch;
   flex-wrap: wrap;
 }
+
+md-input-container{
+  margin: 20px;
+}

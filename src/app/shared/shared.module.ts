@@ -9,7 +9,9 @@ import {
   MdInputModule,
   MdListModule,
   MdMenuModule,
-  MdCardModule
+  MdCardModule,
+  MdSelectModule,
+  MdSnackBarModule
 } from '@angular/material';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -28,7 +30,9 @@ export * from './models';
     MdToolbarModule,
     MdCardModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdSelectModule,
+    MdSnackBarModule
   ],
   exports: [
     MdButtonModule,
@@ -41,7 +45,9 @@ export * from './models';
     MdToolbarModule,
     MdCardModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdSelectModule,
+    MdSnackBarModule
   ],
   declarations: []
 })
