@@ -1,0 +1,34 @@
+
+<!--<md-list>
+  <md-list-item *ngFor="let item of items | async">
+    {{item.color}} -
+    <button md-raised-button color="warn" id="remove" (click)="remove(item)">Remove</button>
+  </md-list-item>
+</md-list>-->
+<table>
+  <thead>
+    <tr>
+      <td colspan="6">inventory list</td>
+    </tr>
+    <tr>
+      <th>quantity</th>
+      <th>type</th>
+      <th>name</th>
+      <th>color</th>
+      <th>cost</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items | async">
+      <td>{{item.quantity}}</td>
+      <td>{{item.type}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.color}}</td>
+      <td>{{item.cost}}</td>
+      <td>
+        <button md-raised-button color="warn" id="remove" (click)="remove(item)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

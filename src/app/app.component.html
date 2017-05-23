@@ -1,43 +1,53 @@
 <app-toolbar [title]="title"></app-toolbar>
 
-  <md-card>
-    <button md-raised-button color="primary">PRIMARY</button>
-    <button md-raised-button color="accent">ACCENT</button>
-    <button md-raised-button color="warn">WARN</button>
-  </md-card>
-<!--<app-toolbar [title]="title"></app-toolbar>-->
-<!--<md-menu #appMenu="mdMenu">
-  <button md-menu-item> Settings </button>
-  <button md-menu-item> Help </button>
-</md-menu>
-
-<button md-icon-button [mdMenuTriggerFor]="appMenu">
-   <md-icon>more_vert</md-icon>
-</button>
-
-
-<md-grid-list cols="2" rowHeight="1:1">
+<router-outlet></router-outlet>
+<!--<md-grid-list cols="2">
   <md-grid-tile>
-    <md-list>
-      <md-list-item *ngFor="let item of items | async"> 
-        {{item.$value}} - 
-        <button md-raised-button id="remove" (click)="remove(item)">Remove</button></md-list-item>
-    </md-list>
+    <md-card class="item-card">
+
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>Items</md-card-title>
+        <md-card-subtitle>Items in Firebase</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <app-inventory-list></app-inventory-list>
+        <app-inventory-add></app-inventory-add>
+      </md-card-content>
+    </md-card>
   </md-grid-tile>
   <md-grid-tile>
     <app-people></app-people>
   </md-grid-tile>
-  <md-grid-tile>
-    <md-input-container class="example-full-width">
-      <input mdInput type="text" id="item" placeholder="item..." #item value="item">
-    </md-input-container>
-    <br>
-    <button md-raised-button id="submit" (click)="onSubmit(item)">SAVE</button>
+</md-grid-list>-->
 
+<!--<md-card>
+  <button md-raised-button color="primary">PRIMARY</button>
+  <button md-raised-button color="accent">ACCENT</button>
+  <button md-raised-button color="warn">WARN</button>
+</md-card>
+
+<md-grid-list cols="3" rowHeight="1:.5">
+  <md-grid-tile>
+    <md-grid-tile-header>Items</md-grid-tile-header>
+    <md-list>
+      <md-list-item *ngFor="let item of items | async">
+        {{item.$value}} -
+        <button md-raised-button color="warn" id="remove" (click)="remove(item)">Remove</button>
+      </md-list-item>
+    </md-list>
+    <md-grid-tile-footer>
+      <md-input-container class="example-full-width">
+        <input mdInput type="text" id="item" placeholder="item..." #item value="item">
+      </md-input-container>
+      <br>
+      <button md-raised-button color="accent" id="submit" (click)="onSubmit(item)">SAVE</button>
+    </md-grid-tile-footer>
+  </md-grid-tile>
+  <md-grid-tile></md-grid-tile>
+  <md-grid-tile>
+    <app-people></app-people>
   </md-grid-tile>
   <md-grid-tile>
-    <md-input-container class="example-full-width">
-      <input mdInput placeholder="Company (disabled)" value="Google">
-    </md-input-container>
   </md-grid-tile>
 </md-grid-list>-->

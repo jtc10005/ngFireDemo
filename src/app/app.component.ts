@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+// import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +7,24 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'working';
+  title = 'NG Fire';
 
-  items: FirebaseListObservable<any>;
-  constructor(db: AngularFireDatabase) {
+  // items: FirebaseListObservable<any>;
+  constructor() {
     // console.log();
-    this.items = db.list('/items');
+    // this.items = db.list('/items');
   }
 
-  onSubmit(item: HTMLInputElement) {
-    console.log('item', item);
-    this.items.push(item.value);
-    item.value = '';
-    console.log(this.items);
-  }
+  // onSubmit(item: HTMLInputElement) {
+  //   console.log('item', item);
+  //   this.items.push(item.value);
+  //   item.value = '';
+  //   console.log(this.items);
+  // }
 
-  remove(id: any) {
-    console.log('id', id);
-    this.items.remove(id);
-  }
+  // remove(id: any) {
+  //   console.log('id', id);
+  //   this.items.remove(id);
+  // }
 
 }
