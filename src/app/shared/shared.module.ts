@@ -11,6 +11,8 @@ import {
   MdCardModule
 } from '@angular/material';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 export * from './models';
 
 @NgModule({
@@ -23,7 +25,8 @@ export * from './models';
     MdListModule,
     MdMenuModule,
     MdToolbarModule,
-    MdCardModule
+    MdCardModule,
+    FlexLayoutModule
   ],
   exports: [
     MdButtonModule,
@@ -34,7 +37,8 @@ export * from './models';
     MdListModule,
     MdMenuModule,
     MdToolbarModule,
-    MdCardModule
+    MdCardModule,
+    FlexLayoutModule
   ],
   declarations: []
 })

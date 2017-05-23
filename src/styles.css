@@ -1,14 +1,23 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 
-.example-icon {
-  padding: 0 14px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+.menu-container {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;    /* Add this */
 }
 
-/*.item-card {
-  width: 80%;
-}*/
+.menu {
+  /*border: 1px solid black;*/
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
