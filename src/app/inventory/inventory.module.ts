@@ -17,4 +17,5 @@ import { InventoryAddComponent } from './inventory-add/inventory-add.component';
   exports: [InventoryComponent]
 })
 export class InventoryModule { }
+
 export * from './inventory.component';

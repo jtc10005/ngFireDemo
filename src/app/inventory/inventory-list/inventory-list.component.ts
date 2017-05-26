@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Inventory } from '../../shared/shared.module';
+
 @Component({
   selector: 'app-inventory-list',
   templateUrl: './inventory-list.component.html',

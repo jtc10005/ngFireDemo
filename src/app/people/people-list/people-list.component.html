@@ -1,0 +1,33 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <td colspan="4">People list</td>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th>Last</th>
+      <th>First</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people | async">
+      <td>{{person.$key}}}</td>
+      <td>{{person.lastName}}</td>
+      <td>{{person.firstName}}</td>
+      <td>
+        <button md-fab color="warn" id="remove" (click)="remove(person)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!--<ul>
+  <li class="text" *ngFor="let person of people | async">
+    {{person.$key}}
+    {{person.lastName + ", " + person.firstName}} -
+    <button id="remove" (click)="remove(person)">Remove</button>
+  </li>
+</ul>-->
