@@ -1,5 +1,11 @@
 # Ngfire
 
+## uses:
+1. [Bootstrap v4.0.0 alpha](http://v4-alpha.getbootstrap.com/)
+2. [Angular Material 2.0.0 Beta](https://material.angular.io/)
+3. [Google Firebase](https://firebase.google.com/)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## steps
