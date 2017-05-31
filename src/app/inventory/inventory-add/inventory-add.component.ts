@@ -41,6 +41,9 @@ export class InventoryAddComponent implements OnInit {
       color: '',
       quantity: [1, Validators.required],
       cost: '',
+      source: '',
+      description: '',
+      active: true
     });
   }
 
