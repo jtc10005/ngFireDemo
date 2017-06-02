@@ -17,6 +17,8 @@ import {
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { AddressModule } from './directives/address/address.module';
+
 export * from './models';
 
 @NgModule({
@@ -34,7 +36,8 @@ export * from './models';
     FlexLayoutModule,
     MdSelectModule,
     MdSnackBarModule,
-    MdSlideToggleModule
+    MdSlideToggleModule,
+    AddressModule
   ],
   exports: [
     MdButtonModule,
@@ -50,7 +53,8 @@ export * from './models';
     FlexLayoutModule,
     MdSelectModule,
     MdSnackBarModule,
-    MdSlideToggleModule
+    MdSlideToggleModule,
+    AddressModule
   ],
   declarations: []
 })

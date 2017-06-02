@@ -32,7 +32,7 @@ export class PeopleAddComponent implements OnInit {
   }
 
   onSubmit() {
-    let person = this.peopleForm.value;
+    const person = this.peopleForm.value;
     console.log('item', person);
     this.people.push(person);
     this.snackBar.open('Item Saved');
