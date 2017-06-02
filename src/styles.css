@@ -22,6 +22,6 @@
   flex-wrap: wrap;
 }
 
-md-input-container{
+md-input-container, .md-input-container{
   margin: 20px;
 }

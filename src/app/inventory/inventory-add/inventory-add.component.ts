@@ -12,7 +12,6 @@ import { MdSnackBar } from '@angular/material';
 })
 export class InventoryAddComponent implements OnInit {
 
-  newItem = new Inventory({ type: 'shirt', name: 'Old Navy', color: 'red', quantity: 5, cost: 12.99 });
   items: FirebaseListObservable<Inventory[]>;
   colors: FirebaseListObservable<string[]>;
   itemForm: FormGroup; // = new FormGroup({}
@@ -38,7 +37,7 @@ export class InventoryAddComponent implements OnInit {
     this.itemForm = this.fb.group({
       name: ['', Validators.required],
       type: ['', Validators.required],
-      color: '',
+      color: [[], Validators.required],
       quantity: [1, Validators.required],
       cost: '',
       source: '',
@@ -48,7 +47,7 @@ export class InventoryAddComponent implements OnInit {
   }
 
   onSubmit() {
-    let item = this.itemForm.value;
+    const item = this.itemForm.value;
     console.log('item', item);
     this.items.push(item);
     this.snackBar.open('Item Saved');

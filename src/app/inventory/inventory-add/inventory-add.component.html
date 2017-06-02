@@ -4,12 +4,11 @@
     <md-input-container><input mdInput type="text" id="type" placeholder="type..." #item value="type" formControlName="type"> </md-input-container>
   </div>
   <div>
-    <!--<md-input-container >-->
-     <!-- <label>Pick Color(s)</label>-->
-      <md-select placeholder="Color" formControlName="color">
+    <span class="md-input-container">
+      <md-select multiple placeholder="Color" formControlName="color">
         <md-option *ngFor="let color of colors | async" [value]="color.$value">{{ color.$value}}</md-option>
       </md-select>
-    <!--</md-input-container>-->
+    </span>
   </div>
   <div>
     <md-input-container>
@@ -20,7 +19,9 @@
     </md-input-container>
   </div>
   <div>
-    <md-slide-toggle formControlName="active">active</md-slide-toggle>
+    <span class="md-input-container">
+      <md-slide-toggle formControlName="active">item active</md-slide-toggle>
+    </span>
   </div>
   <div>
     <md-input-container>

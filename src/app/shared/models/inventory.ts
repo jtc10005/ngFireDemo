@@ -2,7 +2,7 @@ export class Inventory {
 
     type: string;
     name: string;
-    color: string;
+    color: string[];
     quantity: number;
     cost: number;
     description: string;
@@ -13,7 +13,7 @@ export class Inventory {
         {
             'type'?: string,
             'name'?: string,
-            'color'?: string,
+            'color'?: string[],
             'quantity'?: number,
             'cost'?: number,
             'description'?: string,
@@ -22,7 +22,7 @@ export class Inventory {
         }) {
         this.type = options.type || '';
         this.name = options.name || '';
-        this.color = options.color || '';
+        this.color = options.color || [];
         this.quantity = +options.quantity || 0;
         this.cost = +options.cost || 0;
         this.description = options.description || '';
