@@ -1,6 +1,22 @@
-<div [formGroup]="addressForm">
+<div [formGroup]="addressFg">
   <div>
     <md-input-container> <input mdInput type="text" id="address1" placeholder="address1..." #person value="address1" formControlName="address1">      </md-input-container>
     <md-input-container><input mdInput type="text" id="address2" placeholder="address2..." #person value="address2" formControlName="address2">      </md-input-container>
+  </div>
+  <div>
+    <md-input-container> <input mdInput type="text" id="city" placeholder="city..." #person value="city" formControlName="city"> </md-input-container>
+    <span class="md-input-container">
+      <md-select  placeholder="state" formControlName="state">
+        <md-option *ngFor="let state of states | async" [value]="state.$value">{{ state.$value}}</md-option>
+      </md-select>
+    </span>
+  </div>
+  <div>
+    <md-input-container> <input mdInput type="text" id="postalCode" placeholder="postalCode..." #person value="postalCode" formControlName="postalCode">      </md-input-container>
+    <span class="md-input-container">
+      <md-select  placeholder="country" formControlName="country">
+        <md-option *ngFor="let country of countries | async" [value]="country.$value">{{ country.$value}}</md-option>
+      </md-select>
+    </span>
   </div>
 </div>

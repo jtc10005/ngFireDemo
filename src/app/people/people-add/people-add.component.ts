@@ -29,6 +29,7 @@ export class PeopleAddComponent implements OnInit {
       firstName: ['', Validators.required],
       email: ''
     });
+
   }
 
   onSubmit() {

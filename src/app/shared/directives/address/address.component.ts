@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
     selector: 'app-address-component',
@@ -7,21 +9,30 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 })
 
 export class AddressComponent implements OnInit {
-    addressForm: FormGroup;
+    @Input() parentForm: FormGroup;
 
-    constructor(private fb: FormBuilder) { this.createForm(); }
+    addressFg: FormGroup;
+    states: FirebaseListObservable<string[]>;
+    countries: FirebaseListObservable<string[]>;
+    constructor(db: AngularFireDatabase, private fb: FormBuilder) {
+        this.states = db.list('/states');
+        this.countries = db.list('/countries');
+    }
 
-    ngOnInit() { }
+    ngOnInit() { this.createForm(); }
 
     createForm() {
-        this.addressForm = this.fb.group({
+
+        this.addressFg = this.fb.group({
             address1: ['', Validators.required],
             address2: '',
             city: ['', Validators.required],
             state: ['', Validators.required],
             postalCode: ['', Validators.required],
             country: ['', Validators.required],
-            associatedId: ['', Validators.required],
+            // associatedId: ['', Validators.required],
         });
+        this.parentForm.addControl('address', this.addressFg);
+
     }
 }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import { AddressComponent } from './address.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
@@ -15,8 +15,9 @@ import {
     MdSnackBarModule,
     MdSlideToggleModule
 } from '@angular/material';
+
 @NgModule({
-    imports: [ReactiveFormsModule, MdInputModule],
+    imports: [ReactiveFormsModule, CommonModule, MdInputModule, MdSelectModule],
     exports: [AddressComponent],
     declarations: [AddressComponent],
     providers: [],

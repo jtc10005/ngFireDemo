@@ -6,13 +6,12 @@
   <div>
     <md-input-container><input mdInput type="email" id="email" placeholder="email..." #person value="email" formControlName="email"></md-input-container>
   </div>
-  <app-address-component> </app-address-component>
+  <app-address-component [parentForm]="peopleForm"> </app-address-component>
   <div>
     <button type="submit" md-raised-button color="accent" [disabled]="peopleForm.pristine || peopleForm.invalid" id="submit">SAVE</button>
     <button type="reset" md-raised-button color="accent" [disabled]="peopleForm.pristine" id="reset">Reset</button>
   </div>
 </form>
-
 
 
 <p>Form value: {{ peopleForm.value | json }}</p>
