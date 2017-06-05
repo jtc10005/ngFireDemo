@@ -37,20 +37,21 @@ export class PeopleAddComponent implements OnInit {
   onSubmit() {
 
     const address: FormGroup = this.peopleForm.get('address').value;
-    this.peopleForm.removeControl('address');
-    const person: FormGroup = this.peopleForm.value;
-    let newID = this.addPerson(person);
+    const person =  Object.assign({}, this.peopleForm.value)
+    console.log('person', person);
+    // const person: FormGroup = this.peopleForm.value;
+    // let newID = this.addPerson(person);
 
-    this.addAddress(newID, address)
-    this.snackBar.open('Item Saved');
-    this.peopleForm.reset();
+    // this.addAddress(newID, address)
+    // this.snackBar.open('Item Saved');
+    // this.peopleForm.reset();
   }
 
   addPerson(person: FormGroup): string {
     const newPerson = this.people.push(person);
     return newPerson.key;
   }
-  
+
   addAddress(key: string, address: FormGroup): string {
     const add = { key: { address } }
     const newAddress = this.addresses.push(add);
