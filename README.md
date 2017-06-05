@@ -8,11 +8,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
-## steps
-clone repo
-npm install or yarn
-fix enviornment.ts file
-ng serve -o
+## step
+1. clone repo
+2. run `npm install or yarn`
+3. fix enviornment.ts file (update to your firebase config)
+4. run `ng serve -o`
 
 ## Development server
 
